@@ -1,0 +1,44 @@
+.segmented-control {
+  display: flex;
+  background-color: var(--control-bg);
+  border-radius: 12px;
+  padding: 4px;
+  box-shadow: 
+    inset 2px 2px 5px var(--shadow-dark),
+    inset -2px -2px 5px var(--shadow-light);
+}
+
+.segment {
+  flex: 1;
+  padding: 8px 16px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 14px;
+  color: var(--text-secondary);
+  user-select: none;
+}
+
+.segment:hover {
+  color: var(--text-color);
+}
+
+.segment.active {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  box-shadow: 
+    2px 2px 5px var(--shadow-dark),
+    -2px -2px 5px var(--shadow-light);
+}
+
+.segmented-control.full-width {
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.segmented-control.full-width .segment {
+  flex-basis: calc(50% - 8px);
+  margin: 4px;
+  min-width: fit-content;
+}
