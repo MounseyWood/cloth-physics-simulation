@@ -26,10 +26,10 @@ jobs:
     - name: Build 🏗️
       run: npm run build
     
-   - name: Deploy to GitHub Pages 🚀
-  if: github.ref == 'refs/heads/main'
-  uses: JamesIves/github-pages-deploy-action@v4
-  with:
-    branch: main      # Changed to deploy to main branch
-    folder: build     # The folder the action should deploy
-    clean: true       # Automatically remove deleted files from the deployment
+    - name: Deploy to GitHub Pages 🚀
+      if: github.ref == 'refs/heads/main'
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: gh-pages
+        folder: build
+        clean: true
