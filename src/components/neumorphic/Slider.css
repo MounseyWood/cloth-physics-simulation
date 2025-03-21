@@ -1,0 +1,47 @@
+.neumorphic-slider {
+  position: relative;
+  height: 30px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.slider-track {
+  position: relative;
+  height: 6px;
+  border-radius: 3px;
+  background-color: var(--inset-bg);
+  box-shadow: 
+    inset 2px 2px 3px var(--shadow-dark),
+    inset -2px -2px 3px var(--shadow-light);
+}
+
+.slider-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 3px;
+  background-color: var(--active-color);
+}
+
+.slider-handle {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--text-secondary);
+  box-shadow: 
+    2px 2px 4px var(--shadow-dark),
+    -2px -2px 4px var(--shadow-light);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.neumorphic-slider.active .slider-handle {
+  background-color: var(--text-color);
+}
+
+.neumorphic-slider:hover .slider-handle {
+  background-color: var(--text-color);
+}
